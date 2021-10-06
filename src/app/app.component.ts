@@ -19,7 +19,7 @@ export class AppComponent {
     await worker.load();
     await worker.loadLanguage('eng');
     await worker.initialize('eng');
-    const { data: { text } } = await worker.recognize("../../assets/Testimg.jpg");
+    const { data: { text } } = await worker.recognize("https://github.com/avenkatesh194/tesseract/blob/main/assets/Testimg.jpg");
     this.ocrResult = text;
     console.log(text);
     await worker.terminate();
